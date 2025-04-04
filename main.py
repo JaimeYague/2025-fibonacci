@@ -1,10 +1,19 @@
 def selectprog():
     programa = int(input(
     """
-    Secuencia de Fibonacci - Selecciona una opcion:
+    Secuencia de Fibonacci - Selecciona una opcion(0 para salir):
     1- Encuentra el enesimo termino
     2- Calcula el termino mayor o igual al introducido
     """))
+    if programa == 1:
+        n = 11
+        secuencia(n)
+
+    elif programa == 2:
+        secuenciados()
+
+    else:
+        exit
 
 
 def secuencia(n):
@@ -12,8 +21,6 @@ def secuencia(n):
     while len(fibonacci) < n:
         fibonacci.append(fibonacci[-1] + fibonacci[-2])
     print(fibonacci[-1])
-
-secuencia(11)
 
 def secuenciados():
     n = int(input("Escribe un numero: "))
