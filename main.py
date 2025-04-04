@@ -8,7 +8,7 @@ def selectprog():
     if programa == 1:
         n = int(input("Introduce un termino a encontrar: "))
         resultado = secuencia(n)
-        print("El término con la posición", n, "es:", resultado)
+        print("El numero con el término", n, "es:", resultado)
         exit("Programa finalizado...")
 
     elif programa == 2:
@@ -44,8 +44,8 @@ def secuenciados():
     print("El primer numero mayor o igual que el introducido es: ", fibonacci[-1])
     exit("Programa finalizado...")
 
-selectprog()
+if __name__ == "__main__":
+
+    selectprog()
   
-secuenciados()
-
-
+    secuenciados()
