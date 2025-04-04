@@ -6,21 +6,30 @@ def selectprog():
     2- Calcula el termino mayor o igual al introducido
     """))
     if programa == 1:
-        n = 11
-        secuencia(n)
+        n = int(input("Introduce un termino a encontrar: "))
+        resultado = secuencia(n)
+        print("El término con la posición", n, "es:", resultado)
+        exit("Programa finalizado...")
 
     elif programa == 2:
         secuenciados()
 
     else:
-        exit
+        exit("Saliendo del programa...")
 
 
 def secuencia(n):
+    if n <= 0:
+        exit("Necesito que n sea positivo")
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    
     fibonacci = [0, 1]
     while len(fibonacci) < n:
         fibonacci.append(fibonacci[-1] + fibonacci[-2])
-    print(fibonacci[-1])
+    return fibonacci[-1]
 
 def secuenciados():
     n = int(input("Escribe un numero: "))
@@ -32,11 +41,11 @@ def secuenciados():
     fibonacci = [0, 1]
     while (fibonacci[-1]) < n:
         fibonacci.append(fibonacci[-1] + fibonacci[-2])
-        print(fibonacci)
     print("El primer numero mayor o igual que el introducido es: ", fibonacci[-1])
+    exit("Programa finalizado...")
 
 selectprog()
-secuencia(11)   
+  
 secuenciados()
 
 
